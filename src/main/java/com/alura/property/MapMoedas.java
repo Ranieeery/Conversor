@@ -8,16 +8,20 @@ public class MapMoedas {
 
     public MapMoedas() {
         moedas = new HashMap<>() {{
-            put("dolar", 5.28);
-            put("euro", 5.69);
-            put("libra", 6.43);
-            put("pesoarg", 0.026);
-            put("pesochi", 0.0064);
+            put("Dólares", 5.28);
+            put("Euros", 5.69);
+            put("Libras", 6.43);
+            put("Peso Argentino", 0.026);
+            put("Peso Chileno", 0.0064);
         }};
     }
 
     public Double getMoedas(String moeda) {
         return moedas.get(moeda);
+    }
+
+    public void getMoedas() {
+        moedas.forEach((key, value) -> System.out.println(key));
     }
 
     @Override
